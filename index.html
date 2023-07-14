@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="js/client_news.js"></script>
+    </head>
+    <body onload="colorScroll()">
+        <div class="shadow"></div>
+        <div id="menu_background" class="menu-background">
+            <a href="index.html">
+                <div class="logo-container">
+                    <img src="img/logo.png" class="logo">
+                </div>
+            </a>
+            <div class="menu-btn-container">
+                <a class="menu-btn" href="">Home</a>
+                <a class="menu-btn" href="">Forums</a>
+                <a class="menu-btn" onclick="NewsInit()">News</a>
+                <a class="menu-btn" href="">About</a>
+                <a class="menu-btn" href="">Contact</a>
+            </div>
+        </div>
+
+        <div id="upper_tab" class="upper-tab-background">
+            <div class="upper-flex-container">
+                <input id="search_bar" class="search-bar" placeholder="Search...">
+                <div style="display:flex; margin-right: 1%; margin-top: 1%;">
+                    <a class="upper-tab-btn" href="">Login</a>
+                    <a class="upper-tab-btn" href="">Register</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<script>
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+    async function colorScroll(){
+        var menuBackground = document.getElementById("menu_background");
+        var upperTab = document.getElementById("upper_tab");
+
+        var intervalStep = 0.01;
+        var maxGlow = 100;
+        var speed = 45;
+        var intensity = 0;
+        var dir = 1; // 1 = increase, -1 = decrease
+        while(true){
+            if(dir > 0){
+                if(intensity >= 1)
+                    dir = -1;
+            }
+            else{
+                if(intensity <= 0)
+                    dir = 1;
+            }
+
+            intensity = dir > 0 ? intensity += intervalStep : intensity -= intervalStep;
+
+            menuBackground.style.boxShadow = "0 0 " + (maxGlow * intensity) + "px #574c82";
+            upperTab.style.boxShadow = "0 0 " + (maxGlow * intensity) + "px #574c82";
+            await timer(speed);
+        }
+    }
+</script>
