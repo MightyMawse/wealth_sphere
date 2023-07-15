@@ -156,6 +156,11 @@ body{
     padding-top: 1%;
 }
 
+.graph{
+    width: 25%;
+    height: 25%;
+}
+
 .menu-btn:hover{
     transition-duration: 500ms;
     background-color: #524f62;

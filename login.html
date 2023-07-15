@@ -1,11 +1,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="login.css">
         <script type="text/javascript" src="js/client_news.js"></script>
         <script type="text/javascript" src="js/client_stonks.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
-    <body onload="colorScroll()">
+    <body onload="colorScroll()" style="background-image: none;">
         <div class="shadow"></div>
         <div id="menu_background" class="menu-background">
             <a href="index.html">
@@ -23,18 +24,10 @@
             </div>
         </div>
 
-        <div id="upper_tab" class="upper-tab-background">
-            <div class="upper-flex-container">
-                <input id="search_bar" class="search-bar" placeholder="Search...">
-                <div style="display:flex; margin-right: 1%; margin-top: 1%;">
-                    <a class="upper-tab-btn" href="login.html">Login</a>
-                    <a class="upper-tab-btn" href="">Register</a>
-                </div>
-            </div>
+        <div class="login">
+            <input class="login-input" placeholder="Username or Email Address...">
+            <input class="login-input" placeholder="Password...">
         </div>
-
-        <canvas id="chart"></canvas>
-
     </body>
 </html>
 
@@ -42,7 +35,6 @@
     const timer = ms => new Promise(res => setTimeout(res, ms))
     async function colorScroll(){
         var menuBackground = document.getElementById("menu_background");
-        var upperTab = document.getElementById("upper_tab");
 
         var intervalStep = 0.01;
         var maxGlow = 100;
@@ -62,7 +54,6 @@
             intensity = dir > 0 ? intensity += intervalStep : intensity -= intervalStep;
 
             menuBackground.style.boxShadow = "0 0 " + (maxGlow * intensity) + "px #574c82";
-            upperTab.style.boxShadow = "0 0 " + (maxGlow * intensity) + "px #574c82";
             await timer(speed);
         }
     }
