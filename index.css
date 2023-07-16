@@ -221,7 +221,8 @@ body{
 .dashboard-button:hover{
     width: 30%;
     height: 40%;
-    background-color: #3c3f47;
+    background-color: #574c82;
+    box-shadow: 0 0 10px ;
 }
 
 @font-face {
