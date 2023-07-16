@@ -161,7 +161,70 @@ body{
     height: 25%;
 }
 
+.dashboard{
+    border-style: solid;
+    border-radius: 5%;
+    border-color: #5f6471;
+    border-width: 1px;
+    background-color: #1d1d1d;
+    height: 85%;
+    width: 65%;
+    margin-left: 25%;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dashboard-text{
+    color: white;
+    font-size: 30;
+    font-family: heavitas;
+    text-align: center;
+    text-shadow: 0 0 10px white;
+}
+
+.dashboard-button{
+    border-color: #5f6471;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10%;
+    width: 25%;
+    height: 30%;
+    color: white;
+    font-size: 20;
+    padding-top: 80;
+    padding-bottom: 55;
+    padding-left: 8;
+    padding-right: 8;
+    box-shadow: 0 0 20px black;
+    font-size: 15;
+    font-family: heavitas;
+    text-align: center;
+    text-shadow: 0 0 3px #5f6471;
+    transition-duration: 1000ms;
+}
+
+.dashboard-element-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2.5%;
+    margin-top: 0.5%;
+}
+
 .menu-btn:hover{
     transition-duration: 500ms;
     background-color: #524f62;
+}
+
+.dashboard-button:hover{
+    width: 30%;
+    height: 40%;
+    background-color: #3c3f47;
+}
+
+@font-face {
+    font-family: heavitas;
+    src: url("Heavitas.ttf");
 }

@@ -4,9 +4,10 @@
         <script type="text/javascript" src="js/client_news.js"></script>
         <script type="text/javascript" src="js/client_stonks.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     </head>
     <body onload="colorScroll()">
-        <div class="shadow"></div>
+        <!--div class="shadow"></div-->
         <div id="menu_background" class="menu-background">
             <a href="index.html">
                 <div class="logo-container">
@@ -33,7 +34,23 @@
             </div>
         </div>
 
-        <canvas id="chart"></canvas>
+        <div class="dashboard">
+            <div class="dashboard-element-container">
+                <a class="dashboard-button">User Profile Setup</a>
+                <a class="dashboard-button">News Feed</a>
+                <a class="dashboard-button">Account Recommendations</a>
+            </div>
+            <div class="dashboard-element-container">
+                <a class="dashboard-button">Financial Goal Setting</a>
+                <a class="dashboard-button">Community Forums</a>
+                <a class="dashboard-button">Education Resources</a>
+            </div>
+            <div class="dashboard-element-container">
+                <a class="dashboard-button">Events and Webinars</a>
+                <a class="dashboard-button">Investment Portfolio Tracking</a>
+                <a class="dashboard-button">Social Networking Features</a>
+            </div>
+        </div>
 
     </body>
 </html>
